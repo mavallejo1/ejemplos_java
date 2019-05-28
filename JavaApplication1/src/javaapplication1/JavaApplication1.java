@@ -18,23 +18,21 @@ public class JavaApplication1 {
      * @param args the command line arguments
      */
     public static void main(String... ejemplo) {
-        
-        System.out.println ("ingrese el tamaño del vector");
+      
         Scanner sc = new Scanner(System.in);
-        int tamano = sc.nextInt();
+        int[][] numeros = new int[3][3];
         
-        String[] vector = new String [3];
-        
-        for(int i = 0; i < vector.length; i++){
-            System.out.println("ingrese contenido para la posicion" + i + " : ");
-            vector[i]= sc.next();
+        for (int i = 0; i < 3; i++) {
+            for (int j = 0; j < 3; j++){
+                System.out.println("ingrese elemento para la posicion" + i + "columna" + j);
+                numeros[i][j] = sc.nextInt();
+                
+            }
         }
-     
-        System.out.println ("--------------");
-        
-        for(String dato : vector) {
-            System.out.println(dato);
-        }
-  }     
-        
+        for (int i = 0; i < 3; i++) {
+            for (int j = 0; j < 3; j++){
+                System.out.print(numeros[i][j]+"\t");
+            }
+            System.out.print("\n");
 }
+    }
